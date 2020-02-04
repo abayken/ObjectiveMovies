@@ -8,7 +8,13 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@import UIKit;
+
+@interface ViewController () <UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *movieTableView;
+
+
 
 @end
 
@@ -16,7 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [_movieTableView registerNib:[UINib nibWithNibName: @"MovieItem" bundle: nil] forCellReuseIdentifier: @"movie-cell"];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"movie-cell" forIndexPath:indexPath];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
 }
 
 
