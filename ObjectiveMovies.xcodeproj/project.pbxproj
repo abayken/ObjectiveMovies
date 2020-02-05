@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0B779923EA7D99008D7329 /* MovieService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B779823EA7D99008D7329 /* MovieService.m */; };
+		2C0B779D23EA8212008D7329 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B779C23EA8212008D7329 /* Movie.m */; };
+		2C0B779F23EA8D49008D7329 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C0B779E23EA8D49008D7329 /* movies.json */; };
 		2C766E1A23E97FB4004347CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C766E1923E97FB4004347CE /* AppDelegate.m */; };
 		2C766E1D23E97FB4004347CE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C766E1C23E97FB4004347CE /* SceneDelegate.m */; };
 		2C766E2023E97FB4004347CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C766E1F23E97FB4004347CE /* ViewController.m */; };
@@ -19,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C0B779723EA7BBE008D7329 /* MovieService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieService.h; sourceTree = "<group>"; };
+		2C0B779823EA7D99008D7329 /* MovieService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieService.m; sourceTree = "<group>"; };
+		2C0B779B23EA8194008D7329 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		2C0B779C23EA8212008D7329 /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		2C0B779E23EA8D49008D7329 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		2C766E1523E97FB4004347CE /* ObjectiveMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C766E1823E97FB4004347CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C766E1923E97FB4004347CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,6 +55,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C0B779223EA7AA3008D7329 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				2C766E3223E98767004347CE /* MovieItemCell.h */,
+				2C766E3323E98767004347CE /* MovieItemCell.m */,
+				2CB29EE123E98CF700062E5B /* MovieItem.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		2C0B779623EA7BAF008D7329 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2C0B779723EA7BBE008D7329 /* MovieService.h */,
+				2C0B779823EA7D99008D7329 /* MovieService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2C0B779A23EA817F008D7329 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C0B779B23EA8194008D7329 /* Movie.h */,
+				2C0B779C23EA8212008D7329 /* Movie.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2C766E0C23E97FB4004347CE = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +102,9 @@
 		2C766E1723E97FB4004347CE /* ObjectiveMovies */ = {
 			isa = PBXGroup;
 			children = (
+				2C0B779E23EA8D49008D7329 /* movies.json */,
+				2C0B779A23EA817F008D7329 /* Models */,
+				2C0B779623EA7BAF008D7329 /* Service */,
 				2C766E3123E9873F004347CE /* MovieList */,
 				2C766E1823E97FB4004347CE /* AppDelegate.h */,
 				2C766E1923E97FB4004347CE /* AppDelegate.m */,
@@ -85,9 +124,7 @@
 		2C766E3123E9873F004347CE /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
-				2C766E3223E98767004347CE /* MovieItemCell.h */,
-				2C766E3323E98767004347CE /* MovieItemCell.m */,
-				2CB29EE123E98CF700062E5B /* MovieItem.xib */,
+				2C0B779223EA7AA3008D7329 /* cells */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -151,6 +188,7 @@
 			files = (
 				2C766E2823E97FBD004347CE /* LaunchScreen.storyboard in Resources */,
 				2C766E2523E97FBD004347CE /* Assets.xcassets in Resources */,
+				2C0B779F23EA8D49008D7329 /* movies.json in Resources */,
 				2CB29EE223E98CF700062E5B /* MovieItem.xib in Resources */,
 				2C766E2323E97FB4004347CE /* Main.storyboard in Resources */,
 			);
@@ -165,8 +203,10 @@
 			files = (
 				2C766E3423E98767004347CE /* MovieItemCell.m in Sources */,
 				2C766E2023E97FB4004347CE /* ViewController.m in Sources */,
+				2C0B779D23EA8212008D7329 /* Movie.m in Sources */,
 				2C766E1A23E97FB4004347CE /* AppDelegate.m in Sources */,
 				2C766E2B23E97FBD004347CE /* main.m in Sources */,
+				2C0B779923EA7D99008D7329 /* MovieService.m in Sources */,
 				2C766E1D23E97FB4004347CE /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

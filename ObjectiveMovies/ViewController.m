@@ -7,31 +7,56 @@
 //
 
 #import "ViewController.h"
+#import "MovieItemCell.h"
+#import "MovieService.h"
 
 @import UIKit;
+@import Foundation;
 
 @interface ViewController () <UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *movieTableView;
 
-
-
+@property (nonatomic) NSArray<Movie *> *movies;
 @end
 
 @implementation ViewController
 
+MovieService *service;
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [_movieTableView registerNib:[UINib nibWithNibName: @"MovieItem" bundle: nil] forCellReuseIdentifier: @"movie-cell"];
+    service = [[MovieService alloc] init];
+    self.movies = [NSArray new];
+    [self fetchMovies];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"movie-cell" forIndexPath:indexPath];
-    return cell;
+
+
+- (void) fetchMovies {
+    [service getMovies:^(NSArray<Movie *> *movies) {
+        
+        self.movies = movies;
+        
+        [self.movieTableView reloadData];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    if (self.movies == nil) {
+        return 0;
+    } else {
+        return self.movies.count;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MovieItemCell * cell = (MovieItemCell*) [tableView dequeueReusableCellWithIdentifier:@"movie-cell" forIndexPath:indexPath];
+    cell.someLabel.text = self.movies[indexPath.row].movieName;
+    return cell;
 }
 
 
