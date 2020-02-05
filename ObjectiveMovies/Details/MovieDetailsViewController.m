@@ -24,6 +24,8 @@
     _overview.text = _movie.movieDescription;
     
     [ _movieImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://image.tmdb.org/t/p/w300%@", _movie.posterPath]]];
+    
+    _popularity.text = [NSString stringWithFormat:@"Popularity: %@", (NSString*) _movie.popularity];
 }
 
 /*

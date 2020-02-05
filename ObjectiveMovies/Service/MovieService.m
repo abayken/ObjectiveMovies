@@ -31,6 +31,9 @@
         movie.movieName = [arr[i] objectForKey:@"title"];
         movie.movieDescription = [arr[i] objectForKey:@"overview"];
         movie.posterPath = [arr[i] objectForKey:@"poster_path"];
+        movie.popularity = [arr[i] objectForKey:@"popularity"];
+        
+    
         //[movies addObject:[arr[i] objectForKey:@"title"]];
         [movies addObject:movie];
     }

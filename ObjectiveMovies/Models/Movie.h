@@ -15,6 +15,8 @@
 
 @property (nonatomic, readwrite) NSString *movieDescription;
 
-@property (nonatomic, readwrite) NSString *posterPath; 
+@property (nonatomic, readwrite) NSString *posterPath;
+
+@property (nonatomic, readwrite) NSNumber *popularity;
 
 @end
