@@ -11,10 +11,12 @@
 #import "MovieService.h"
 #import <SDWebImage/SDWebImage.h>
 
+#import "MovieDetailsViewController.h"
+
 @import UIKit;
 @import Foundation;
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *movieTableView;
 
@@ -69,6 +71,21 @@ NSArray<Movie*> * moviesList;
     [[cell movieImage] sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://image.tmdb.org/t/p/w300%@", moviesList[indexPath.row].posterPath]]];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    
+    MovieDetailsViewController *detailsVC = [board instantiateViewControllerWithIdentifier:@"details"];
+    
+    detailsVC.movie = moviesList[indexPath.row];
+    
+    [[self navigationController] pushViewController:detailsVC animated:YES];
+    
 }
 
 
