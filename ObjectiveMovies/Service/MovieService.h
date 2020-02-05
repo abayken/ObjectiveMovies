@@ -14,7 +14,7 @@
 
 @interface MovieService: NSObject
 
-- (void) getMovies: (void(^) (NSArray <Movie *>*)) callback;
+- (void) getMovies: (void(^) (NSMutableArray <Movie *>*)) callback;
 
 @end
 

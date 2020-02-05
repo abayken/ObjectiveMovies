@@ -37,7 +37,7 @@ MovieService *service;
 
 
 - (void) fetchMovies {
-    [service getMovies:^(NSArray<Movie *> *movies) {
+    [service getMovies:^(NSMutableArray<Movie *> *movies) {
         
         self.movies = movies;
         

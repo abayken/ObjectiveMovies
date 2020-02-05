@@ -16,15 +16,28 @@
 
 @implementation MovieService
 
-- (void)getMovies:(void (^)(NSArray<Movie *> *))callback {
-    Movie *movie = [Movie alloc];
+- (void)getMovies:(void (^)(NSMutableArray<Movie *> *))callback {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"movies" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
     
-    movie.movieDescription = @"Hello";
-    movie.movieName = @"Sterw";
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
-    NSArray <Movie *> *movies = @[movie];
+    NSArray<NSDictionary*> *arr = [dict objectForKey:@"data"];
+    
+    NSMutableArray<Movie*> *movies = [NSMutableArray new];
+    
+    for (int i = 0; i < [arr count]; i++) {
+        Movie *movie = [Movie new];
+        movie.movieName = [arr[i] objectForKey:@"original_title"];
+        movie.movieDescription = [arr[i] objectForKey:@"overview"];
+        movie.posterPath = [arr[i] objectForKey:@"poster_path"];
+        
+        [movies addObject:movie];
+    }
     
     callback(movies);
 }
+
+
 
 @end
