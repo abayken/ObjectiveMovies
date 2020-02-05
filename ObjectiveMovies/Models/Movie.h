@@ -11,10 +11,10 @@
 
 @interface Movie: NSObject
 
-@property (nonatomic, assign) NSString *movieName;
+@property (nonatomic, readwrite) NSString *movieName;
 
-@property (nonatomic, assign) NSString *movieDescription;
+@property (nonatomic, readwrite) NSString *movieDescription;
 
-@property (nonatomic, assign) NSString *posterPath; 
+@property (nonatomic, readwrite) NSString *posterPath; 
 
 @end

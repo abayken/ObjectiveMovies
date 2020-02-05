@@ -10,17 +10,8 @@
 
 @implementation MovieItemCell
 
-static NSString *identifier = @"MovieItemCell";
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
+@synthesize someLabel = _someLabel;
+@synthesize movieImage = _movieImage;
+@synthesize movieOverview = _movieOverview; 
 
 @end

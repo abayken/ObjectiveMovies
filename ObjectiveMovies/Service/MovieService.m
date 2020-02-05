@@ -28,10 +28,10 @@
     
     for (int i = 0; i < [arr count]; i++) {
         Movie *movie = [Movie new];
-        movie.movieName = [arr[i] objectForKey:@"original_title"];
+        movie.movieName = [arr[i] objectForKey:@"title"];
         movie.movieDescription = [arr[i] objectForKey:@"overview"];
         movie.posterPath = [arr[i] objectForKey:@"poster_path"];
-        
+        //[movies addObject:[arr[i] objectForKey:@"title"]];
         [movies addObject:movie];
     }
     
