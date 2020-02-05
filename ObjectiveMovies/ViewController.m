@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MovieItemCell.h"
 #import "MovieService.h"
+#import <SDWebImage/SDWebImage.h>
 
 @import UIKit;
 @import Foundation;
@@ -45,8 +46,6 @@ NSArray<Movie*> * moviesList;
         
         moviesList = movies;
         
-        
-        
         [self.movieTableView reloadData];
         
     }];
@@ -63,9 +62,11 @@ NSArray<Movie*> * moviesList;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MovieItemCell * cell =  (MovieItemCell *) [tableView dequeueReusableCellWithIdentifier:@"movie-cell" forIndexPath:indexPath];
     
-    cell.someLabel.text = moviesList[indexPath.row].movieName;
+    cell.movieName.text = moviesList[indexPath.row].movieName;
     
     cell.movieOverview.text = moviesList[indexPath.row].movieDescription;
+    
+    [[cell movieImage] sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://image.tmdb.org/t/p/w300%@", moviesList[indexPath.row].posterPath]]];
     
     return cell;
 }

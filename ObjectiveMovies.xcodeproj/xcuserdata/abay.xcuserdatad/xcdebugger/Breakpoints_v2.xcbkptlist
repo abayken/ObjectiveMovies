@@ -18,6 +18,38 @@
             endingLineNumber = "50"
             landmarkName = "-fetchMovies"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0D3A62D7-439E-433A-8C80-A947B214DB7E - 1f0af7d3e6757b22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__29-[ViewController fetchMovies]_block_invoke"
+                  moduleName = "ObjectiveMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abay/Desktop/iosapps/ObjectiveMovies/ObjectiveMovies/ViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "142">
+               </Location>
+               <Location
+                  uuid = "0D3A62D7-439E-433A-8C80-A947B214DB7E - d4458fbe694586c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_e8_32s"
+                  moduleName = "ObjectiveMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abay/Desktop/iosapps/ObjectiveMovies/ObjectiveMovies/ViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -10,8 +10,5 @@
 
 @implementation MovieItemCell
 
-@synthesize someLabel = _someLabel;
-@synthesize movieImage = _movieImage;
-@synthesize movieOverview = _movieOverview; 
 
 @end
