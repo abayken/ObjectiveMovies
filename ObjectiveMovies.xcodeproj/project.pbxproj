@@ -112,8 +112,8 @@
 		2C766E1723E97FB4004347CE /* ObjectiveMovies */ = {
 			isa = PBXGroup;
 			children = (
-				2CAF759F23EAD0760044CEA1 /* Details */,
 				2C0B779E23EA8D49008D7329 /* movies.json */,
+				2CAF759F23EAD0760044CEA1 /* Details */,
 				2C0B779A23EA817F008D7329 /* Models */,
 				2C0B779623EA7BAF008D7329 /* Service */,
 				2C766E3123E9873F004347CE /* MovieList */,
@@ -121,8 +121,6 @@
 				2C766E1923E97FB4004347CE /* AppDelegate.m */,
 				2C766E1B23E97FB4004347CE /* SceneDelegate.h */,
 				2C766E1C23E97FB4004347CE /* SceneDelegate.m */,
-				2C766E1E23E97FB4004347CE /* ViewController.h */,
-				2C766E1F23E97FB4004347CE /* ViewController.m */,
 				2C766E2123E97FB4004347CE /* Main.storyboard */,
 				2C766E2423E97FBD004347CE /* Assets.xcassets */,
 				2C766E2623E97FBD004347CE /* LaunchScreen.storyboard */,
@@ -136,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				2C0B779223EA7AA3008D7329 /* cells */,
+				2C766E1E23E97FB4004347CE /* ViewController.h */,
+				2C766E1F23E97FB4004347CE /* ViewController.m */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
